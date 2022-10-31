@@ -1,6 +1,7 @@
 const toolbar = document.getElementById('toolbar');
 const editor = document.getElementById('editor');
 const button = document.getElementById('button');
+// var QuillDeltaToHtmlConverter = require('quill-delta-to-html').QuillDeltaToHtmlConverter;
 // const { htmlToText } = require('html-to-text');
 
 let toolbarOptions = [
@@ -16,10 +17,14 @@ var quill = new Quill(editor,{
 
 button.addEventListener('click', function(){
     var delta = quill.getContents();
-    var html = quill.root.innerHTML
-    var strippedHtml = html.replace(/<[^>]+>/g, '');
     console.log(delta);
-    console.log(html);
+    var cfg = {};
+    // var converter = new QuillDeltaToHtmlConverter(delta, cfg);
+    // var html = converter.convert(); 
+    // console.log(html);
+    var htmlTwo = quill.root.innerHTML
+    console.log(htmlTwo);
+    var strippedHtml = htmlTwo.replace(/<[^>]+>/g, '');
     console.log(strippedHtml);
 });
 
