@@ -18,7 +18,7 @@ var quill = new Quill(editor,{
 button.addEventListener('click', function(){
     var delta = quill.getContents();
     console.log(delta);
-    var cfg = {};
+    // var cfg = {};
     // var converter = new QuillDeltaToHtmlConverter(delta, cfg);
     // var html = converter.convert(); 
     // console.log(html);
